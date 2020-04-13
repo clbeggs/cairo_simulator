@@ -12,7 +12,7 @@ import pybullet as p
 import pybullet_data
 
 
-ASSETS_PATH = os.path.dirname(os.path.abspath(__file__)) + '/../../assets/' # Find ./cairo_simulator/assets/ from ./cairo_simulator/src/cairo_simulator/
+ASSETS_PATH = os.path.dirname(os.path.abspath(__file__)) + '/../assets/' # Find ./cairo_simulator/assets/ from ./cairo_simulator/src/cairo_simulator/
 
 class Simulator:
     __instance = None    
