@@ -202,7 +202,13 @@ class Sawyer(Manipulator):
         self._gripper_dof_indices = self._populate_dof_indices(self._gripper_dof_names) # Left finger, Right finger
         self._extra_dof_indices = self._populate_dof_indices(self._extra_dof_names)
 
-        # Get end effector link index by looking at the parent link for a gripper joint, since links don't have names in PyBullet        
+        # Get end effector link index by looking at the parent link for a gripper joint, since links don't have names in PyBullet  
+       
+        print(self._gripper_dof_indices)   
+        print("============================================================")
+        print(p.getJointInfo(self._simulator_id, self._gripper_dof_indices[0]))  
+        print(p.getJointInfo(self._simulator_id, self._gripper_dof_indices[1]))    
+        print(p.getJointInfo(self._simulator_id, self._gripper_dof_indices[0])[16])
         self._end_effector_link_index = p.getJointInfo(self._simulator_id, self._gripper_dof_indices[0])[16]
 
         # Initialize joint limits
